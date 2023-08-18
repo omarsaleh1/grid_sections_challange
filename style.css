@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: hsl(213, 44%, 95%);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+main {
+    width: 65%;
+    height: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas: "one one two five" "three four four five";
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 25px;
+    border-radius: 7px;
+    box-shadow: 4px 8px 24px -10px #000000a8;
+}
+.profile img {
+    width:32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 5px;
+    margin-right: 20px;
+}
+#section-one {
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-color:hsl(263, 55%, 52%) ;
+    color: hsl(0, 0%, 100%);
+    grid-area: one;
+}
+#section-one image {
+    position: static;
+    top: 10px;
+    right: 10px;
+}
+#section-two {
+    background-color:hsl(217, 19%, 35%) ;
+    color: hsl(0, 0%, 100%);
+    grid-area: two;
+}
+#section-three {
+    background-color:hsl(0, 0%, 100%) ;
+    grid-area: three;
+}
+#section-four {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+    grid-area: four;
+}
+#section-five {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: five;
+}
+.profile {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.auth {
+    font-size: 12px;
+    opacity: 60%;
+    display: flex;
+}
+.description {
+    font-weight: 600;
+    
+}
+.article {
+    font-weight: 500;
+    opacity: 60%;
+}
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 50%;
+    transform: translate(50%);
+}
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 10px;
+        width: 100%;
+        height: 100%;    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: scroll;
+        justify-content: space-around;
+        align-items: center;
+        }
+  }
